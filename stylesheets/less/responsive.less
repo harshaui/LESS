@@ -1,0 +1,6 @@
+.responsive-mixin(@column-size; @screen-size) when (@column-size < 13){
+    .column-@{screen-size}-@{column-size} {
+        width: (100% / (12/@column-size));
+    }
+    .responsive-mixin((@column-size + 1); @screen-size);
+}
